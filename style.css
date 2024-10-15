@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+/* Navigation bar */
+#nav-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 50px;
+    background-color: black;
+    color: white;
+    z-index: 100;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.hamburger {
+    cursor: pointer;
+}
+
+.line {
+    width: 30px;
+    height: 4px;
+    background-color: white;
+    margin: 5px;
+}
+
+/* Hidden menu that slides in when clicked */
+#menu {
+    position: fixed;
+    top: 50px;
+    left: 0;
+    width: 200px;
+    background-color: black;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s ease;
+}
+
+#menu.active {
+    height: 300px;
+}
+
+#menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#menu ul li {
+    padding: 15px;
+    text-align: left;
+}
+
+#menu ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* General section styling */
+.section {
+    height: 100vh;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    transition: background-color 0.3s;
+}
+
+#section1 {
+    background-color: lightblue;
+}
+
+#section2 {
+    background-color: lightcoral;
+}
+
+#section3 {
+    background-color: lightgreen;
+}
+
+/* Bento box styling */
+#bento-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    width: 80%;
+    margin-top: 20px;
+}
+
+.box {
+    background-color: lightgray;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    font-size: 18px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Grow effect triggered by Intersection Observer */
+.grow-on-scroll {
+    transform: scale(0.8);
+    opacity: 0;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.grow-on-scroll.visible {
+    transform: scale(1);
+    opacity: 1;
+}
+
+/* Bento box hover effect (from earlier) */
+.box:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Remaining section styles */
+#section4 {
+    background-color: lightpink;
+}
+
+#section5 {
+    background-color: lightyellow;
+}
+
+#section6 {
+    background-color: lightgray;
+}
+img{
+    height:100px;
+    width:100px;
+}

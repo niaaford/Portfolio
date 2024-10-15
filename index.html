@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vertical Scroll Portfolio</title>
+    <link rel="stylesheet" href="/style.css">
+    
+</head>
+<body>
+
+    <!-- Navigation bar with hamburger icon -->
+    <div id="nav-bar">
+        <div class="hamburger" onclick="toggleMenu()">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <div id="menu">
+            <ul>
+                <li><a href="#section1">Welcome</a></li>
+                <li><a href="#section2">About Me</a></li>
+                <li><a href="#section3">Projects</a></li>
+                <li><a href="#section4">Skills</a></li>
+                <li><a href="#section5">Contact</a></li>
+                <li><a href="#section6">More Info</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Section 1: Welcome Screen -->
+    <div id="section1" class="section">
+        <h1>Welcome, Recruiter!</h1>
+   
+        
+        <p>Scroll down to see my work and know more about me.</p>
+    </div>
+
+    <!-- Section 2: About Me with Bento Box -->
+    <div id="section2" class="section">
+        <h2>About Me</h2>
+        <p>This section gives an overview of who I am and my background.</p>
+        
+        </div>
+    
+
+    <!-- Section 3: Projects -->
+    <div id="section3" class="section">
+        <h2>Projects</h2>
+        <div id="bento-container">
+            <div class="box">
+                <link rel="#" href="/Playlist app/Playlsit-app/Playlist/index.html">
+            </div>
+            <div class="box">Project 6</div>
+            <div class="box">Project 7</div>
+            <div class="box">Project 8</div>
+        </div>
+    </div>
+
+    <!-- Section 4: Skills -->
+    <div id="section4" class="section">
+        <h2>Skills</h2>
+        <p>This section lists my professional skills and expertise.</p>
+    </div>
+
+    <!-- Section 5: Contact -->
+    <div id="section5" class="section">
+        <h2>Contact</h2>
+        <p>How to get in touch with me.</p>
+    </div>
+
+    <!-- Section 6: More Info -->
+    <div id="section6" class="section">
+        <h2>More Info</h2>
+        <p>Additional information, links, or portfolio items.</p>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('menu');
+            menu.classList.toggle('active');
+        }
+
+        // Intersection Observer for triggering the smooth grow effect
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                const box = entry.target;
+                if (entry.isIntersecting) {
+                    box.classList.add('visible');
+                } else {
+                    box.classList.remove('visible');
+                }
+            });
+        });
+
+        document.querySelectorAll('.grow-on-scroll').forEach(box => {
+            observer.observe(box);
+        });
+    </script>
+</body>
+</html>
