@@ -1,152 +1,148 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-html, body {
-    height: 100%;
-    font-family: Arial, sans-serif;
+html,
+body {
+  height: 100%;
+  font-family: Arial, sans-serif;
 }
 
 body {
-    scroll-behavior: smooth;
-    overflow-x: hidden;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 /* Navigation bar */
 #nav-bar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 50px;
-    background-color: black;
-    color: white;
-    z-index: 100;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 0 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 50px;
+  background-color: black;
+  color: white;
+  z-index: 100;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0 20px;
 }
 
 .hamburger {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .line {
-    width: 30px;
-    height: 4px;
-    background-color: white;
-    margin: 5px;
+  width: 30px;
+  height: 4px;
+  background-color: white;
+  margin: 5px;
 }
 
 /* Hidden menu that slides in when clicked */
 #menu {
-    position: fixed;
-    top: 50px;
-    left: 0;
-    width: 200px;
-    background-color: black;
-    height: 0;
-    overflow: hidden;
-   
+  position: fixed;
+  top: 50px;
+  left: 0;
+  width: 200px;
+  background-color: black;
+  height: 0;
+  overflow: hidden;
 }
 
 #menu.active {
-    height: 300px;
+  height: 300px;
 }
 
 #menu ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
 #menu ul li {
-    padding: 15px;
-    text-align: left;
+  padding: 15px;
+  text-align: left;
 }
 
 #menu ul li a {
-    color: white;
-    text-decoration: none;
+  color: white;
+  text-decoration: none;
 }
 
 /* General section styling */
 .section {
-    min-height: 100vh;
-    padding: 50px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #f0f0f0;
-   
+  min-height: 100vh;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0;
 }
 
 #section1 {
-    background-color: lightblue;
+  background-color: lightblue;
 }
 
 #section2 {
-    background-color: lightcoral;
+  background-color: lightcoral;
 }
 
 #section3 {
-    background-color: lightgreen;
-  
+  background-color: lightgreen;
 }
 h2 {
-    margin-bottom: 40px; /* Add space between the h2 and the squares */
-    font-size: 2rem; /* Adjust the font size if necessary */
-    text-align: center; /* Center the title if not already centered */
+  margin-bottom: 40px; /* Add space between the h2 and the squares */
+  font-size: 2rem; /* Adjust the font size if necessary */
+  text-align: center; /* Center the title if not already centered */
 }
-.project-container{
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    gap: 10px;
-    width: 100%;
+.project-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  width: 100%;
 }
-.square{
-    position: relative; /* Create a positioning context */
-    width: 100%; /* Make the square take full width of the grid cell */
-    padding-bottom: 100%; /* Maintain square aspect ratio */
-    overflow: hidden; /* Hide overflow to prevent images from spilling */
-    background-color: aqua; /* Fallback color */
-
+.square {
+  position: relative; /* Create a positioning context */
+  width: 100%; /* Make the square take full width of the grid cell */
+  padding-bottom: 100%; /* Maintain square aspect ratio */
+  overflow: hidden; /* Hide overflow to prevent images from spilling */
+  background-color: aqua; /* Fallback color */
 }
 .square img {
-    position: absolute; /* Position image absolutely within the square */
-    top: 50%; /* Align to the vertical center */
-    left: 50%; /* Align to the horizontal center */
-    width: 100%; /* Stretch image to full width */
-    height: 100%; /* Stretch image to full height */
-    object-fit: cover; /* Scale the image to cover the square */
-    transform: translate(-50%, -50%); /* Center the image */
+  position: absolute; /* Position image absolutely within the square */
+  top: 50%; /* Align to the vertical center */
+  left: 50%; /* Align to the horizontal center */
+  width: 100%; /* Stretch image to full width */
+  height: 100%; /* Stretch image to full height */
+  object-fit: cover; /* Scale the image to cover the square */
+  transform: translate(-50%, -50%); /* Center the image */
 }
-
 
 /* Remaining section styles */
 #section4 {
-    background-color: lightpink;
+  background-color: lightpink;
 }
 
 #section5 {
-    background-color: lightyellow;
+  background-color: lightyellow;
 }
 
 #section6 {
-    background-color: lightgray;
+  background-color: lightgray;
 }
 @media (max-width: 768px) {
-    .project-container {
-        grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
-    }
+  .project-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
+  }
 }
 
 @media (max-width: 480px) {
-    .project-container {
-        grid-template-columns: 1fr; /* 1 column for mobile devices */
-    }
+  .project-container {
+    grid-template-columns: 1fr; /* 1 column for mobile devices */
+  }
 }

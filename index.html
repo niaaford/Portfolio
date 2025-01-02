@@ -1,39 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vertical Scroll Portfolio</title>
-    <link rel="stylesheet" href="/style.css">
-    
-</head>
-<body>
-
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
     <!-- Navigation bar with hamburger icon -->
     <div id="nav-bar">
-        <div class="hamburger" onclick="toggleMenu()">
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
-        </div>
-        <div id="menu">
-            <ul>
-                <li><a href="#section1">Welcome</a></li>
-                <li><a href="#section2">About Me</a></li>
-                <li><a href="#section3">Projects</a></li>
-                <li><a href="#section4">Skills</a></li>
-                <li><a href="#section5">Contact</a></li>
-                <li><a href="#section6">More Info</a></li>
-            </ul>
-        </div>
+      <div class="hamburger" onclick="toggleMenu()">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+      <div id="menu">
+        <ul>
+          <li><a href="#section1">Welcome</a></li>
+          <li><a href="#section2">About Me</a></li>
+          <li><a href="#section3">Projects</a></li>
+          <li><a href="#section4">Skills</a></li>
+          <li><a href="#section5">Contact</a></li>
+          <li><a href="#section6">More Info</a></li>
+        </ul>
+      </div>
     </div>
 
     <!-- Section 1: Welcome Screen -->
     <div id="section1" class="section">
-        <h1>Welcome, Recruiter!</h1>
-   
-        
-        <p>Scroll down to see my work and know more about me.</p>
+      <h1>Welcome, Recruiter!</h1>
+
+      <p>Scroll down to see my work and know more about me.</p>
     </div>
 
     <!-- Section 2: About Me with Bento Box -->
@@ -46,49 +43,49 @@
 
     <!-- Section 3: Projects -->
     <div id="section3" class="section">
-        <h2>Projects</h2>
-        <div class="project-container">
+      <h2>Projects</h2>
+      <div class="project-container">
         <div class="square">
-            <a href=" https://niaaford.github.io/music-playlist-app/" target="_blank">
-                <img src="/playlist-preview-img.png" alt="" >
-            </a>
+          <a
+            href=" https://niaaford.github.io/music-playlist-app/"
+            target="_blank"
+          >
+            <img src="/playlist-preview-img.png" alt="" />
+          </a>
         </div>
         <div class="square">
-            <img src="/Screen Shot 2024-08-05 at 6.09.03 PM.png">
+          <img src="/Screen Shot 2024-08-05 at 6.09.03 PM.png" />
         </div>
         <div class="square">
-            <img src="/Screenshot 2024-10-21 at 2.35.29 PM.png" alt="" >
+          <img src="/Screenshot 2024-10-21 at 2.35.29 PM.png" alt="" />
         </div>
         <div class="square"></div>
-        </div>
-          
+      </div>
     </div>
 
     <!-- Section 4: Skills -->
     <div id="section4" class="section">
-        <h2>Skills</h2>
-        <p>This section lists my professional skills and expertise.</p>
+      <h2>Skills</h2>
+      <p>This section lists my professional skills and expertise.</p>
     </div>
 
     <!-- Section 5: Contact -->
     <div id="section5" class="section">
-        <h2>Contact</h2>
-        <p>How to get in touch with me.</p>
+      <h2>Contact</h2>
+      <p>How to get in touch with me.</p>
     </div>
 
     <!-- Section 6: More Info -->
     <div id="section6" class="section">
-        <h2>More Info</h2>
-        <p>Additional information, links, or portfolio items.</p>
+      <h2>More Info</h2>
+      <p>Additional information, links, or portfolio items.</p>
     </div>
 
     <script>
-        function toggleMenu() {
-            var menu = document.getElementById('menu');
-            menu.classList.toggle('active');
-        }
-
-    
+      function toggleMenu() {
+        var menu = document.getElementById("menu");
+        menu.classList.toggle("active");
+      }
     </script>
-</body>
+  </body>
 </html>
